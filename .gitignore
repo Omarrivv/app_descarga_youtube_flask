@@ -1,1 +1,17 @@
-.env
+# Archivos de entorno virtual
+venv/
+env/
+.venv/
+# Archivos de byte compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# Carpeta que contiene las configuraciones del IDE o editor de texto
+.idea/
+.vscode/
+# Archivos de sistema operativo
+Thumbs.db  # Para usuarios de Windows
+# Archivos de configuración de Python
+*.manifest
+*.spec
