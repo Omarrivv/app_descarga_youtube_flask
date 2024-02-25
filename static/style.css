@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px;
+}
+.menu-toggle,
+.nav-list {
+    display: none;
+}
+.navbar.active .nav-list {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    background-color: #444;
+    border-bottom: 3px solid #222;
+    text-align: center;
+}
+.nav-item {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+.nav-link {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+.nav-link:hover {
+    color: #fff;
+}
+.close-btn {
+    display: none;
+    font-size: 18px;
+    color: #ddd;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: #ffffff;
+    }
+    .navbar.active .nav-list {
+        display: block;
+    }
+    .navbar.active .close-btn {
+        display: block;
+    }
+}
+/* ...otros estilos... */
+/* Estilos para el botón de hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar en pantallas grandes */
+    /* ...otros estilos... */
+}
+/* Estilos para la lista de navegación */
+.nav-list {
+    list-style-type: none;
+    display: flex; /* Mostrar de forma horizontal en pantallas grandes */
+    gap: 20px;
+    /* ...otros estilos... */
+}
+/* ...otros estilos... */
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Mostrar el botón de menú de hamburguesa en dispositivos móviles */
+    .menu-toggle {
+        display: flex;
+    }
+    /* Ocultar la lista de navegación en dispositivos móviles */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        /* ...otros estilos... */
+    }
+    /* Añadir la clase .active al hacer clic en el menú de hamburguesa para mostrar los elementos */
+    .nav-list.active {
+        display: flex;
+    }
+}
+/* ...otros estilos... */
+h1 {
+    background-color: #d8d8d8; /* Un gris claro para el fondo */
+    color: #333; /* Un gris oscuro para el texto para un buen contraste */
+    padding: 20px 40px; /* Un buen padding para hacerlo grande y legible */
+    text-align: center; /* Centra el texto */
+    border-radius: 8px; /* Bordes redondeados para un aspecto suave */
+    margin: 20px auto; /* Centra el título horizontalmente y da espacio arriba/abajo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Una sombra suave para profundidad */
+    transition: all 0.3s ease; /* Una transición suave para los cambios de hover */
+}
+/* Efecto de hover para el título */
+h1:hover {
+    background-color: #eaeaea; /* Un cambio de color al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px; /* Reduce el tamaño del texto para dispositivos más pequeños */
+        padding: 15px 30px; /* Reduce el padding */
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Aún más pequeño para pantallas de teléfonos */
+        padding: 10px 20px; /* Aún menos padding */
+    }
+}
+.enlace-estilizado {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #4267B2; /* Azul de Facebook */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.2s, transform 0.2s; /* Transición suave para hover */
+}
+.enlace-estilizado:hover {
+    background-color: #365899; /* Un azul un poco más oscuro para el hover */
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+    text-decoration: none; /* Asegurar que no haya subrayado al pasar el ratón */
+}
+.enlace-estilizado:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+}
+.enlace-estilizado:focus {
+    outline: none; /* Elimina el contorno al hacer clic */
+    box-shadow: 0 0 0 2px rgba(66, 103, 178, 0.5); /* Sombras para un efecto de foco */
+}
